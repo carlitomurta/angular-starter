@@ -1,8 +1,5 @@
 # angular-starter
 
-This project was generated with [ngX-Rocket](https://github.com/ngx-rocket/generator-ngx-rocket/)
-version 6.2.1
-
 # Getting started
 
 1. Go to project folder and install dependencies:
