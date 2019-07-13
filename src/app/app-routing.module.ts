@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 import { Shell } from '@app/shell/shell.service';
+import { NetworkAwarePreloadingStrategy } from './core/preloading-strategy';
 
 const routes: Routes = [
   Shell.childRoutes([{ path: 'about', loadChildren: 'app/about/about.module#AboutModule' }]),
@@ -9,7 +10,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })],
+  imports: [RouterModule.forRoot(routes, { preloadingStrategy: NetworkAwarePreloadingStrategy })],
   exports: [RouterModule],
   providers: []
 })
